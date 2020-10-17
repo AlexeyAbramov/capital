@@ -1,0 +1,34 @@
+$s-width: 20px;
+$s-height: 20px;
+$l-width: $s-width;
+$l-height: 3px;
+
+$s-rotate: 45deg;
+$s-transition-time: 0.4s;
+$translateX: 0;
+.switch {
+  position: relative;
+  width: $s-width;
+  height: $s-height;
+  transition: $s-transition-time;
+  &__line {
+    background-color: $color-blue-dark;
+    position: absolute;
+    &:nth-child(1) {
+      width: $l-width;
+      height: $l-height;
+      top: calc(50% - #{$l-height/2});
+    }
+    &:nth-child(2) {
+      height: $l-width;
+      width: $l-height;
+      left: calc(50% - #{$l-height/2});
+    }
+  }
+  &.active {
+    transform: rotate($s-rotate);
+    & > div {
+      background-color: $color-blue;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.btn{
+    background-color: $color-blue;
+    color: $color-white-default;
+    padding: 17px 0 13px;
+    border: none;
+    font-size: 16px;
+    line-height: 188%;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+    }
+}

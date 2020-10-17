@@ -1,0 +1,27 @@
+@mixin absolute {
+  position: absolute;
+  display: block;
+  content: "";
+}
+@mixin dflexsbcenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin dflexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+// cursor
+@mixin cursor {
+  cursor: url("../../../assets/images/cursor.png"), pointer;
+}
+@mixin border {
+  border: 1px solid $color-grey-border;
+  @include cursor;
+  &:hover{
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid transparent;
+  }
+}

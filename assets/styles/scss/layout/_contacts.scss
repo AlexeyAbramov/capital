@@ -1,0 +1,62 @@
+.contacts{
+    background-color: $color-grey-background;
+    &__content{
+        padding: 78px 0 83px;
+    }
+    .info-contact{
+        margin-top: 31px;
+        display: flex;
+        justify-content: space-between;
+        &__column{
+            flex: 0 1 31%;
+        }
+        .column-info{
+            &__row:nth-child(2){
+                margin-top: 44px;
+            }
+            .phone__row{
+                display: flex;
+                flex-direction: column;
+            }
+            &__title{
+                font-size: 18px;
+                line-height: 138%;
+            }
+            &__text{
+                line-height: 128.57%;
+                margin-top: 10px;
+            }
+            &__link,
+            &__mail{
+                color: $color-blue;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            &__phone{
+                font-size: 25px;
+                line-height: 140%;
+                font-weight: bold;
+                color: $color-blue;
+            }
+            &__file{
+                display: inline-block;
+                color: $color-blue;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 187%;
+                margin-top: 20px;
+                padding: 13px 66px;
+                box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .office{
+            padding-bottom: 20px;
+        }
+    }
+    &__map{
+        margin-top: 50px;
+        height: 400px;
+        background: url('../../../assets/images/contacts/map.png') center / cover;
+    }
+}

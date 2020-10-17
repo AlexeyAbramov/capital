@@ -1,0 +1,50 @@
+.features {
+  padding: 55px 0 90px;
+  .reason-features {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+    &__item {
+      flex: 0 0 calc(25% - 30px);
+      padding: 30px 25px 30px 30px;
+      margin-top: 20px;
+      min-width: 215px;
+      @include border;
+      &::before {
+        font-size: 100px;
+        line-height: 25%;
+        z-index: -1;
+        color: $color-grey-num;
+        right: 27px;
+        top: 85px;
+        font-weight: bold;
+      }
+    }
+    &__title {
+      margin-top: 30px;
+      line-height: 100%;
+    }
+    &__text {
+      margin-top: 17px;
+      font-size: 16px;
+      line-height: 144%;
+      color: $color-grey-text;
+    }
+    &__link{
+      color: $color-blue;
+      text-decoration: underline;
+      @include cursor;
+    }
+    &__consult {
+      margin-top: 45px;
+      text-align: center;
+    }
+    &__button {
+      padding-left: 43px;
+      padding-right: 35px;
+    }
+  }
+}

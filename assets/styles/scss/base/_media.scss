@@ -1,0 +1,11 @@
+@media screen and (max-width: 1070px){
+    .specialization .items-specialization__item{
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+  
+  @media screen and (max-width: 930px){
+    .specialization .items-specialization__item{
+      flex: 0 0 calc(100% - 5px);
+    }
+  }

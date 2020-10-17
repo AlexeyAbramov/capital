@@ -1,0 +1,19 @@
+ol {
+  counter-reset: num;
+}
+
+ol li {
+  list-style: none;
+  position: relative;
+}
+
+ol li:before {
+  position: absolute;
+  counter-increment: num;
+  content: "0" counter(num);
+  font-weight: bold; 
+}
+// если элементов больше 10, убираем '0' перед числом
+ol li:nth-child(n + 10):before {
+  content: counter(num);
+}

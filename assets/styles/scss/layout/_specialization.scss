@@ -1,0 +1,81 @@
+.specialization {
+  padding: 60px 0 90px;
+  background-color: $color-grey-background;
+  &__heading {
+    text-align: center;
+  }
+  .items-specialization {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__item {
+      display: flex;
+      flex: 0 0 calc(33% - 15px);
+      margin-top: 30px;
+      border: 1px solid $color-grey-border;
+      padding: 42px 47px 50px 34px;
+      &:hover .items-specialization__title {
+        color: $color-blue;
+      }
+      &:hover .items-specialization__link {
+        color: $color-blue-callback;
+      }
+      &:hover .items-specialization__link::after {
+        border-top: 2px solid $color-blue-callback;
+        border-right: 2px solid $color-blue-callback;
+      }
+      &:hover {
+        border: 1px solid transparent;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+        @include cursor;
+      }
+      &.hidden{
+        display: none;
+      }
+      &.active{
+        display: flex!important;
+      }
+    }
+    &__icon {
+      height: 37px;
+    }
+    &__content {
+      margin-left: 31px;
+    }
+    &__title {
+      color: $color-blue-dark;
+    }
+    &__text {
+      color: $color-grey-text;
+      line-height: 21px;
+      margin-top: 20px;
+      padding-bottom: 25px;
+    }
+    &__link {
+      position: relative;
+      color: $color-blue;
+      @include cursor;
+      &::after {
+        @include absolute;
+        $width: 8px;
+        width: $width;
+        height: 8px;
+        border-top: 2px solid $color-blue;
+        border-right: 2px solid $color-blue;
+        transform: rotate(45deg);
+        top: calc(50% - #{$width/2});
+        right: -15px;
+      }
+    }
+    &__services{
+      margin-top: 30px;
+    }
+    &__button{
+      text-transform: uppercase;
+      padding-right: 38px;
+      padding-left: 46px;
+    }
+  }
+}

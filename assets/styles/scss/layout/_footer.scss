@@ -1,0 +1,28 @@
+.footer {
+  background-color: $color-blue-dark;
+  height: 600px;
+  &__content {
+    margin-top: 60px;
+  }
+  &-top {
+    display: flex;
+    &__logo {
+      display: flex;
+      align-items: center;
+    }
+    .title-top {
+      color: $color-white-default;
+      margin-left: 18px;
+      font-size: 15px;
+      line-height: 100%;
+      text-align: center;
+      &__capital {
+        display: block;
+        font-family: "AvenirNextCyr Bold";
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// #HelveticaNeueCyr
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url('../../fonts/HelveticaNeueCyr.woff')  format('woff');
+}
+
+// #AvenirNextCyr
+@font-face {
+  font-family: "AvenirNextCyr";
+  src: url('../../fonts/AvenirNextCyr.woff') format('woff');
+}
+@font-face {
+  font-family: "AvenirNextCyr Bold";
+  src: url('../../fonts/AvenirNextCyr Bold.woff') format('woff');
+}
+
+// font-family
+body {
+  font-family: "HelveticaNeueCyr";
+  font-size: 14px;
+}

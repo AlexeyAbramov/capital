@@ -1,0 +1,92 @@
+.stages {
+  background-color: $color-grey-background;
+  &__content {
+    padding: 100px 0 83px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__col:nth-child(1) {
+    flex: 0 0 384px;
+  }
+  &__col:nth-child(2) {
+    flex: 0 1 58%;
+  }
+  &__heading {
+    text-align: center;
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 104%;
+  }
+  &__img {
+    margin-top: 75px;
+  }
+  .stages-content {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      &::before {
+        @include absolute;
+        width: 70px;
+        height: 74.0157480315%;
+        top: 62px;
+        left: -55px;
+        background-color: transparent;
+        border-left: 3px dashed $color-grey-dashed;
+        border-top: 3px dashed $color-grey-dashed;
+        border-bottom: 3px dashed $color-grey-dashed;
+      }
+    }
+    &__item {
+      padding: 43px 63px 30px 121px;
+      background-color: $color-white-default;
+      border: 1px solid $color-grey-border;
+      transition: background-color 0.6s ease, padding 0s;
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+      &::before {
+        font-size: 40px;
+        line-height: 50%;
+        color: $color-blue;
+        top: 51px;
+        left: 40px;
+      }
+      &::after {
+        @include absolute;
+        width: 1px;
+        height: 34px;
+        background-color: $color-blue;
+        transform: rotate(-90deg);
+        top: 44.5px;
+        left: 15px;
+      }
+      &:hover {
+        background-color: $color-blue;
+        @include cursor;
+      }
+      &:hover::after {
+        background-color: $color-white-default;
+      }
+      &:hover::before,
+      &:hover .stages-content__title {
+        color: $color-white-default;
+      }
+      &:hover .stages-content__text {
+        color: $color-grey-form-border;
+      }
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 100%;
+      color: $color-blue-dark;
+    }
+    &__text {
+      margin-top: 14px;
+      font-size: 16px;
+      line-height: 125%;
+      color: $color-grey-text;
+    }
+  }
+}

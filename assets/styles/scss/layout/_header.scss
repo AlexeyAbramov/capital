@@ -1,0 +1,59 @@
+.header {
+  background-color: $color-grey-header;
+  padding: 15px 0 20px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    @include dflexsbcenter;
+  }
+  // SECTION-LOGO
+  .logo-header {
+    color: $color-blue-dark;
+    flex: 0 0 243px;
+    &__title {
+      font-size: 16px;
+    }
+    &__capital {
+      display: block;
+      font-family: "AvenirNextCyr Bold";
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+  }
+  // SECTION-NAV
+  .nav-header {
+    display: flex;
+    align-items: center;
+    flex: 0 1 32%;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__link {
+      color: $color-blue-dark;
+      &:hover {
+        color: $color-blue;
+        @include cursor;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: flex-end;
+    &__phone {
+      color: $color-blue-dark;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    &__callback {
+      font-size: 16px;
+      color: $color-blue-callback;
+      text-decoration: underline;
+    }
+  }
+}
