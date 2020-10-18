@@ -1,14 +1,87 @@
 .footer {
-  background-color: $color-blue-dark;
-  height: 600px;
+  background-color: $color-blue-footer;
   &__content {
     margin-top: 60px;
   }
   &-top {
     display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    &__callback {
+      flex: 0 0 300px;
+    }
     &__logo {
       display: flex;
       align-items: center;
+    }
+    &__btn {
+      display: inline-block;
+      color: $color-white-default;
+      background-color: $color-blue;
+      box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 1px;
+      margin-top: 60px;
+      padding: 16px 60px;
+      font-size: 16px;
+      line-height: 187%;
+    }
+    &__support {
+      @include dflexcolumn;
+    }
+    &__input {
+      position: relative;
+      &::after {
+        $width: 20px;
+        position: absolute;
+        display: block;
+        content: "";
+        width: $width;
+        height: 20px;
+        top: calc(50% - #{$width/2});
+        right: 25px;
+        background: url("../../images/footer/search.png");
+      }
+    }
+    &__search {
+      position: relative;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 1px;
+      border: none;
+      padding: 18px 95px 18px 20px;
+      width: 100%;
+      &::placeholder {
+        font-size: 16px;
+        line-height: 100%;
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+    .contacts-footer {
+      &__title {
+        display: block;
+        font-size: 16px;
+        line-height: 281.25%;
+        color: $color-grey-footer;
+        text-align: end;
+      }
+      &__phone {
+        font-size: 36px;
+        line-height: 125%;
+        font-weight: bold;
+        color: $color-white-default;
+      }
+    }
+    .service-footer {
+      height: inherit;
+      &__list {
+        height: 100%;
+        @include dflexcolumn;
+      }
+      &__link {
+        color: $color-grey-footer;
+        font-size: 16px;
+        line-height: 219%;
+      }
     }
     .title-top {
       color: $color-white-default;
@@ -23,6 +96,38 @@
         text-transform: uppercase;
         line-height: 100%;
       }
+    }
+  }
+  &-bottom {
+    padding: 30px 0 50px;
+    &__copyright {
+      flex: 0 1 45%;
+    }
+    &__text {
+      color: $color-grey-copyright;
+    }
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      .social-footer {
+        flex: 0 0 240px;
+        &__list {
+          @include dflexsbcenter;
+        }
+      }
+    }
+    &__link {
+      text-decoration: underline;
+      color: $color-blue;
+    }
+    &__cookie {
+      margin-top: 20px;
+      max-width: 540px;
+    }
+    &__cookie-security {
+      font-size: 12px;
+      line-height: 133%;
+      color: $color-grey-copyright;
     }
   }
 }
