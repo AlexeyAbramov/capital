@@ -1,11 +1,234 @@
-@media screen and (max-width: 1070px){
-    .specialization .items-specialization__item{
-      flex: 0 0 calc(50% - 10px);
+@media screen and (max-width: 1070px) {
+  //SPECIALIZATION
+  .specialization .items-specialization__item {
+    flex: 0 0 calc(50% - 10px);
+  }
+  //REQUEST
+  .request {
+    &__title {
+      font-size: 37px;
     }
   }
-  
-  @media screen and (max-width: 930px){
-    .specialization .items-specialization__item{
-      flex: 0 0 calc(100% - 5px);
+  //FEATURES
+  .features {
+    &__title {
+      text-align: center;
     }
   }
+  //QUESTIONS
+  .questions {
+    .form {
+      right: 600px;
+    }
+  }
+}
+
+@media screen and (max-width: 930px) {
+  // HEADER
+  .header {
+    &__contacts {
+      &__phone {
+        font-size: 26px;
+      }
+    }
+  }
+  // ABOUT
+  .about {
+    text-align: center;
+    &__bg {
+      display: none;
+    }
+  }
+  .specialization .items-specialization__item {
+    flex: 0 0 calc(50% - 15px);
+  }
+  // REQUEST
+  .request {
+    &__heading {
+      max-width: 500px;
+    }
+    &__title {
+      font-size: 28px;
+      b {
+        font-size: 20px;
+      }
+    }
+    &__text {
+      font-size: 13px;
+    }
+  }
+  // FEATURES
+  .features {
+    .reason-features__item {
+      flex: 0 0 calc(50% - 15px);
+    }
+  }
+  // STAGES
+  .stages {
+    &__content {
+      flex-direction: column;
+      padding-top: 50px;
+    }
+    &__col:nth-child(1) {
+      flex: 0 1 auto;
+    }
+    .stages-content__list::before {
+      display: none;
+    }
+    &__img {
+      display: none;
+    }
+  }
+  // QUESTIONS
+  .questions {
+    &__title {
+      font-size: 35px;
+    }
+    .form {
+      right: 500px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  //QUESTIONS
+  .questions {
+    &__content {
+      display: block;
+      text-align: center;
+    }
+    form {
+      display: none;
+    }
+  }
+  //FOOTER
+  .footer {
+    .contacts-footer__phone {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  //HEADER
+  .header {
+    &__inner {
+      flex-direction: column;
+    }
+    .logo-header {
+      flex: 0 1 auto;
+      justify-content: center;
+    }
+    &__nav,
+    &.nav-header {
+      display: none !important;
+    }
+    &__contacts {
+      margin-top: 20px;
+    }
+  }
+  //ABOUT
+  .about {
+    padding: 45px 0;
+    &__title {
+      font-size: 27px;
+    }
+    &__text {
+      font-size: 17px;
+    }
+  }
+  //SPECIALIZATION
+  .specialization {
+    &__title {
+      font-size: 30px;
+    }
+    .items-specialization__item {
+      flex: 0 0 100%;
+    }
+    #services__btn {
+      text-align: center;
+    }
+  }
+  //REQUEST
+  .request {
+    display: none;
+  }
+  //FEATURES
+  .features {
+    .reason-features__item {
+      flex: 0 0 100%;
+    }
+  }
+  //QUESTIONS
+  .questions {
+    &__content {
+      margin-bottom: 0;
+    }
+  }
+  //STAGES
+  .stages {
+    .stages-content {
+      padding-top: 40px;
+      padding-bottom: 25px;
+      &__title {
+        font-size: 16px;
+      }
+      &__text {
+        font-size: 12px;
+      }
+    }
+  }
+  //ANSWERS
+  .answers {
+    .question-answer__item {
+      padding: 10px 5px 2px 12px;
+    }
+    .question-answer__title {
+      font-size: 20px;
+    }
+    .switch__line:nth-child(2) {
+      left: 50%;
+    }
+  }
+  //CONTACTS
+  .contacts {
+    &__info {
+      flex-direction: column;
+    }
+    &__map {
+      background-position-x: left;
+    }
+  }
+  //FOOTER
+  .footer {
+    .footer-top {
+      flex-direction: column;
+      padding-bottom: 30px;
+      &__support {
+        margin-top: 20px;
+      }
+      &__contacts {
+        text-align: end;
+      }
+      &__callback{
+        text-align: center;
+        flex: 0 0 235px;
+      }
+      &__logo{
+        justify-content: center;
+      }
+    }
+    .service-footer__list {
+      align-items: center;
+      border-bottom: 1px solid #d9d9d9;
+    }
+    .footer-bottom {
+      &__info {
+        flex-direction: column;
+      }
+      &__social {
+        flex: 0 0 70px;
+        padding-top: 20px;
+      }
+    }
+  }
+}
