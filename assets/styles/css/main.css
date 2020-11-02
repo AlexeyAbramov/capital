@@ -244,29 +244,15 @@ ol li:nth-child(n+10):before {
 
 .switch {
   position: relative;
-  width: 20px;
-  height: 20px;
+  font-size: 35px;
+  font-weight: bold;
   transition: 0.4s;
-}
-.switch__line {
-  background-color: #0a1243;
-  position: absolute;
-}
-.switch__line:nth-child(1) {
-  width: 20px;
-  height: 3px;
-  top: calc(50% - 1.5px);
-}
-.switch__line:nth-child(2) {
-  height: 20px;
-  width: 3px;
-  left: calc(50% - 1.5px);
 }
 .switch.active {
   transform: rotate(45deg);
 }
 .switch.active > div {
-  background-color: #4782c6;
+  color: #4782c6;
 }
 
 .header {
@@ -735,9 +721,6 @@ ol li:nth-child(n+10):before {
 .answers .question-answer__item.active .question-answer__content {
   height: 100px;
   transition: 0.4s;
-}
-.answers .question-answer .switch {
-  margin-right: 10px;
 }
 
 .contacts {
